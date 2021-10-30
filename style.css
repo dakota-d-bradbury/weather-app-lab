@@ -4,13 +4,34 @@
   
   body{
     font-family: Tahoma, Geneva, sans-serif;
-    height: 100vh; 
-    margin: 0;
-    display: grid;
+    height: auto;
+    max-width:auto; 
+    margin: auto;
+    display: center;
     grid-template-rows: 3rem auto; 
-    background-color: greenyellow;
+    background-image:  linear-gradient(91deg, rgb(108, 173, 47), rgb(33, 180, 82) 40%, rgb(173, 235, 183));
     text-align: center;
+    text-size-adjust: auto;
 
   }
+
+  main {
+    font-family: Tahoma, Geneva, sans-serif;
+    height: 15rem; 
+    margin: auto;
+    position: center;
+    display: center;
+    justify-content: center;
+    text-transform: capitalize;
+    width: 25rem;
+    border: 1px outset  #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 8px 12px;
+    background-image: linear-gradient(180deg, rgb(255, 255, 255), rgb(254, 233, 200) 40%, #ccc);
+
+  }
+
+ 
+  
   
   

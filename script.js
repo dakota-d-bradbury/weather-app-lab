@@ -15,33 +15,31 @@ $form.on('submit', handleSubmit);
 // Functions
 
 function handleSubmit(evt) {
-    evt.preventDefault(); 
-    const weatherLocation = $input.val();
-  $.ajax(`${BASE_URL}weather?q=`+weatherLocation+`&units=imperial&appid=${API_KEY}`)
-        .then(function(data) {
-            weatherData = data;
-        
-        // add data as text content to our DOM elements
-            render();
+	evt.preventDefault();
+	const weatherLocation = $input.val();
+	$.ajax(`${BASE_URL}weather?q=` + weatherLocation + `&units=imperial&appid=${API_KEY}`)
+		.then(function (data) {
+			weatherData = data;
+			//Round importred temps to nearest uin
+			roundedTemp = Math.round(weatherData.main.temp);
+			roundedFeelsLike = Math.round(weatherData.main.feels_like);
 
-    }, function(error) {
-        // failure callback function
-            console.log(error);
-    });
+			// add data as text content to our DOM elements
+			render();
+
+		}, function (error) {
+			// failure callback function
+			console.log(error);
+		});
 }
 
 
-
 function render() {
-    $main.html(
-   // <img src="${weatherData.Poster}" alt="${weatherData.Title}" />
-    `<h3>Weather For:</h3>
-    <h3><p id="city">${weatherData.name}</p></h3>
-    <p>Temperature</p>
-    <p id="temp">${weatherData.main.temp}</p>
-    <p>Feels Like</p>
-    <p id="feels_like">${weatherData.main.feels_like}</p>
-    <p>Weather</p>
-    <p id ="value">${weatherData.weather[0].description}</p>
-`);
+	$main.html(
+
+	`<h3>Weather For: ${weatherData.name}</p></h3>
+    <p>Temperature: ${roundedTemp}℉</p>
+    <p>Feels Like: ${roundedFeelsLike}℉</p>
+    <p>Weather: ${weatherData.weather[0].description}</p>
+    `);
 }; 
