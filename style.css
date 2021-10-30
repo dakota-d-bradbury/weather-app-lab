@@ -1,0 +1,16 @@
+  
+  /* CSS Custom Properties */
+
+  
+  body{
+    font-family: Tahoma, Geneva, sans-serif;
+    height: 100vh; 
+    margin: 0;
+    display: grid;
+    grid-template-rows: 3rem auto; 
+    background-color: greenyellow;
+    text-align: center;
+
+  }
+  
+  
