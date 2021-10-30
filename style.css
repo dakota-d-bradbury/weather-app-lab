@@ -23,6 +23,7 @@
     display: center;
     justify-content: center;
     text-transform: capitalize;
+    text-align: absolute;
     width: 25rem;
     border: 1px outset  #333;
     box-shadow: 8px 8px 5px #444;

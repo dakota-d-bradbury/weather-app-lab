@@ -40,6 +40,8 @@ function render() {
 	`<h3>Weather For: ${weatherData.name}</p></h3>
     <p>Temperature: ${roundedTemp}℉</p>
     <p>Feels Like: ${roundedFeelsLike}℉</p>
-    <p>Weather: ${weatherData.weather[0].description}</p>
+    <p>Weather Details: ${weatherData.weather[0].description}</p>
+    <p>Weather General: ${weatherData.weather[0].main}</p>
+    
     `);
 }; 
