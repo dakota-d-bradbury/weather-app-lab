@@ -7,7 +7,7 @@ A simple web app for displaying, temperature, windchill, and current conditions 
 -Javascript/Jquery
 -Openweather API
 
-## Screenshots
+
 
 
 ## User Stories
